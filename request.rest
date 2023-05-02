@@ -3,9 +3,15 @@ POST http://localhost:5000/users
 Content-Type: application/json
 
 {
-    "name": "Aldi",
-    "email": "aldi@gmail.com",
+    "name": "Hilda",
+    "email": "hilda@gmail.com",
     "password": "12345",
     "confPassword": "12345",
-    "role": "admin"
+    "role": "user"
 }
+
+### get All Users
+GET http://localhost:5000/users
+
+### get Single Users
+GET http://localhost:5000/users/0684c6e2-7ffa-418d-9204-398f4c685474
