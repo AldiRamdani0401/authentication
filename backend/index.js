@@ -2,8 +2,15 @@ import express from 'express';
 import cors from 'cors';
 import session from 'express-session';
 import dotenv from 'dotenv';
+// import db from './config/Database.js';
+import UserRoute from './routes/UserRoute.js';
+import ProductRoute from './routes/ProductRoute.js';
 
 const app = express();
+
+/* (async() => {
+    await db.sync();
+})(); */
 
 dotenv.config();
 
@@ -24,6 +31,9 @@ app.use(cors ({
 }));
 
 app.use(express.json());
+
+app.use(UserRoute);
+app.use(ProductRoute);
 
 app.listen(process.env.APP_PORT, () => {
     console.log('Server up and running...');
