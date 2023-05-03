@@ -31,3 +31,17 @@ Content-Type: application/json
 ### Delete User
 DELETE   http://localhost:5000/users/0539e8d3-6ab2-41c0-9b4f-bc0b588c38d2
 
+### Login User
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "hilda@gmail.com",
+    "password": "12345"
+}
+
+### Me
+GET  http://localhost:5000/me
+
+### Logout User
+DELETE   http://localhost:5000/logout
