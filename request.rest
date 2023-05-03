@@ -3,15 +3,31 @@ POST http://localhost:5000/users
 Content-Type: application/json
 
 {
-    "name": "Hilda",
-    "email": "hilda@gmail.com",
+    "name": "Aldi",
+    "email": "aldi@gmail.com",
     "password": "12345",
     "confPassword": "12345",
-    "role": "user"
+    "role": "admin"
 }
 
 ### get All Users
 GET http://localhost:5000/users
 
-### get Single Users
+### get Single User
 GET http://localhost:5000/users/0684c6e2-7ffa-418d-9204-398f4c685474
+
+### Update User
+PATCH  http://localhost:5000/users/0684c6e2-7ffa-418d-9204-398f4c685474
+Content-Type: application/json
+
+{
+    "name": "Hilda Updated",
+    "email": "hilda@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+### Delete User
+DELETE   http://localhost:5000/users/0539e8d3-6ab2-41c0-9b4f-bc0b588c38d2
+
