@@ -58,3 +58,11 @@ DELETE   http://localhost:5000/logout
 ### Get All Products
 GET  http://localhost:5000/products
 
+### POST Data Product
+POST  http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name" : "Product 6",
+    "price" : 6000
+}
