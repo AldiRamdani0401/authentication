@@ -58,6 +58,9 @@ DELETE   http://localhost:5000/logout
 ### Get All Products
 GET  http://localhost:5000/products
 
+### Get Single Product
+GET  http://localhost:5000/products/b5a2fd63-e5bd-489a-9d31-3cc010f5a30d
+
 ### POST Data Product
 POST  http://localhost:5000/products
 Content-Type: application/json
