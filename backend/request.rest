@@ -69,3 +69,13 @@ Content-Type: application/json
     "name" : "Product 6",
     "price" : 6000
 }
+
+### UPDATE Data Product
+PATCH   http://localhost:5000/products/b5a2fd63-e5bd-489a-9d31-3cc010f5a30d
+Content-Type: application/json
+
+{
+    "name" : "Product Updated",
+    "price" : 7000
+}
+
