@@ -5,7 +5,7 @@ import logo from '../logo.png'
 const NavBar = () => {
     return (
         <div>
-            <nav className="navbar is-fix-top has-shadow" role="navigation" aria-label="main navigation">
+            <nav className="navbar is-fixed-top has-shadow" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
                 <NavLink to="/dashboard" className="navbar-item">
                 <img src={logo} width="112" height="28" alt='logo'/>
