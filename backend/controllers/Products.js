@@ -77,7 +77,7 @@ export const createProduct = async(req, res) => {
             price: price,
             userId: req.userId
         });
-        res.status(201).json({msg: "Product Created Successfuly"});
+        res.status(201).json({msg: "Product Created successfully"});
     } catch (error) {
         res.status(500).json({msg: error.message});
     }
@@ -106,12 +106,36 @@ export const updateProduct = async(req, res) => {
                 },
             });
         }
-        res.status(200).json({msg: "Product updated successfuly"});
+        res.status(200).json({msg: "Product updated successfully"});
     } catch (error) {
         res.status(500).json({msg: error.message});
     }
 }
 
-export const deleteProduct = (req, res) => {
-
+export const deleteProduct = async(req, res) => {
+    try {
+        const product = await Product.findOne({
+            where:{
+                uuid: req.params.id
+            }
+        });
+        if(!product) return res.status(404).json({msg: "Data tidak ditemukan"});
+        if(req.role === "admin"){
+            await Product.destroy({
+                where: {
+                    id: product.id
+                }
+            });
+        }else{
+            if(req.userId !== product.userId) return res.status(403).json({msg: "Akses terlarang"});
+            await Product.destroy({
+                where:{
+                    [Op.and]:[ {id: product.id} , {userId: req.userId}]
+                },
+            });
+        }
+        res.status(200).json({msg: "Product deleted successfully"});
+    } catch (error) {
+        res.status(500).json({msg: error.message});
+    }
 }
