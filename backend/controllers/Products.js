@@ -41,7 +41,7 @@ export const getProductById = async(req, res) => {
         if(!product) return res.status(404).json({msg: "Data tidak ditemukan"});
         let response;
         if(req.role === "admin"){
-            response = await Products.findOne({
+            response = await Product.findOne({
                 attributes: ['uuid', 'name', 'price'],
                 where:{
                     id: product.id
