@@ -70,6 +70,6 @@ const FormAddProduct = () => {
         </div>
         </div>
     );
-    };
+};
 
 export default FormAddProduct;
