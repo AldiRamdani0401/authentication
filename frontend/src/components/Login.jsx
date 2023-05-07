@@ -8,6 +8,7 @@ const Login = () => {
                 <div className="columns is-centered">
                     <div className="column is-4">
                         <form className='box'>
+                        <h1 className='title is-2'>Sign In</h1>
                             <div className="field">
                                 <label className="label">Email</label>
                                     <div className="control">
@@ -19,7 +20,7 @@ const Login = () => {
                                         <input type="password" className="input" placeholder='*****'/>
                                     </div>
                                 </div>
-                                <div className="field">
+                                <div className="field mt-5">
                                     <button className="button is-success is-fullwidth">Login</button>
                                 </div>
                             </div>
