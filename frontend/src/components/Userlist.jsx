@@ -9,6 +9,7 @@ const Userlist = () => {
                 <thead>
                     <tr>
                         <th>No</th>
+                        <th>Name</th>
                         <th>Email</th>
                         <th>Role</th>
                         <th>Actions</th>
